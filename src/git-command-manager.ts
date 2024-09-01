@@ -328,7 +328,7 @@ class GitCommandManager {
   }
 
   async init(): Promise<void> {
-    await this.execGit(['init', this.workingDirectory])
+    await this.execGit(['init', '--object-format=sha256', this.workingDirectory])
   }
 
   async isDetached(): Promise<boolean> {
